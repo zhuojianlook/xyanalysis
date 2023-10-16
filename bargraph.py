@@ -5,7 +5,7 @@ import pandas as pd
 import io
 
 # Set up streamlit
-st.title("Excel Analysis Visualization")
+st.title("GO Bargraph Heatmap - Hope Easy to use for Gary and XY")
 
 # Upload functionality
 uploaded_file = st.file_uploader("Upload an Excel file", type=["xlsx"])
