@@ -25,8 +25,8 @@ if uploaded_file:
             df_sample = pd.read_excel(uploaded_file, sheet_name=sheet, nrows=5)
             condition_column = st.selectbox(f"Select the condition column for {sheet}:", df_sample.columns)
             condition_columns.append(condition_column)
-            conditions_list.append(df_sample[condition_column].unique()[0])  # Store the first condition for title
-            
+            conditions_list.append(df_sample.iloc[0, 0])  # Store the value from first column, first row for title
+                        
             # Rename y labels (conditions)
             unique_conditions = df_sample[condition_column].unique()
             rename_dict = {}
